@@ -13,7 +13,7 @@ publishDir = "build"
 name = "Mattia Matteini, Kelvin Olaiya, Alberto Paganelli"
 
 # currently only the unsafe mode for goldmark is supported
-[markup.goldmark.renderer]
+[markup.goldmark.renderer]g
 unsafe = true
 
 # choose between Hugo compile-time or Highlight.js
