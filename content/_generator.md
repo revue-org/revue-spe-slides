@@ -33,23 +33,19 @@ Detailed requirements can be found in the [documentation](https://revue-org.gith
 
 ---
 
-# Text
+# Quality Attributes
 
-normal text
+System's main properties: 
 
-`inline code`
+- *Scalability*
 
-*italic*
+- *Availability*
 
-**bold**
+- *Reliability*
 
-**_emphasized_**
+- *Observability*
 
-*__emphasized alternative__*
-
-~~strikethrough~~
-
-[link](http://www.google.com)
+- *Modularity*
 
 ---
 

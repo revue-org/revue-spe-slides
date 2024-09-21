@@ -9,8 +9,13 @@ publishDir = "build"
 # relativeURLs = true
 # uglyURLs = true
 
-[author]
-name = "Mattia Matteini, Kelvin Olaiya, Alberto Paganelli"
+[authors]
+  [authors.mattia]
+    name = "Mattia Matteini"
+  [authors.kelvin]
+    name = "Kelvin Olaiya"
+  [authors.alberto]
+      name = "Alberto Paganelli"
 
 # currently only the unsafe mode for goldmark is supported
 [markup.goldmark.renderer]
