@@ -47,6 +47,9 @@ System's main properties:
 
 - *Modularity*
 
+
+More details in the [documentation](https://revue-org.github.io/revue/docs/report/analysis/quality-attributes).
+
 ---
 
 # Lists and enums
