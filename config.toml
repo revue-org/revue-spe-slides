@@ -13,7 +13,7 @@ publishDir = "build"
 name = "Mattia Matteini, Kelvin Olaiya, Alberto Paganelli"
 
 # currently only the unsafe mode for goldmark is supported
-[markup.goldmark.renderer]g
+[markup.goldmark.renderer]
 unsafe = true
 
 # choose between Hugo compile-time or Highlight.js
@@ -37,8 +37,8 @@ transition = "slide"
 transition_speed = "fast"
 custom_theme = "custom-theme.scss"
 custom_theme_compile = true
-width = '1920'
-height = '1080'
+width = '1440'
+height = '900'
 
 [params.reveal_hugo.custom_theme_options]
 targetPath = "css/custom-theme.css"
