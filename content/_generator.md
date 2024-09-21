@@ -10,37 +10,42 @@ aliases = [
 
 +++
 
+# Introduction
 
-# Short guide to Markdown slides
+Revue is a distributed real-time system for video surveillance. It allows the user to:
+
+1. Check an environment remotely through cameras
+
+2. Monitor an environment using sensors
+
+3. Add security rules based on his needs triggering alarms
+   1. Intrusions in case of broken safety rule by cameras
+   2. Outliers in case of broken safety rule by sensors
+
+
+Due to his level of configurability, Revue can be used in multiple scenarios.
 
 ---
 
-# Headers
+## Requirements
 
-# H1
-## H2
-### H3
-#### H4
+Detailed requirements can be found in the [documentation](https://revue-org.github.io/revue/docs/report/analysis/business-requirements).
 
 ---
 
-# Text
+# Quality Attributes
 
-normal text
+System's main properties: 
 
-`inline code`
+- *Scalability*
 
-*italic*
+- *Availability*
 
-**bold**
+- *Reliability*
 
-**_emphasized_**
+- *Observability*
 
-*__emphasized alternative__*
-
-~~strikethrough~~
-
-[link](http://www.google.com)
+- *Modularity*
 
 ---
 
