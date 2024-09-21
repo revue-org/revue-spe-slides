@@ -1,356 +1,468 @@
 @import "reveal-js/dist/theme/template/mixins";
 @import "reveal-js/dist/theme/template/settings";
 
-
+// Include theme-specific fonts
 // Include theme-specific fonts
 
 // Sans-serif
 // @import url('reveal-js/lib/font/source-sans-pro/source-sans-pro.css');
 // @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Ubuntu');
-@import url('https://fonts.googleapis.com/css2?family=Signika+Negative');
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative");
 // @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
 
 // Serif
-// @import url('https://fonts.googleapis.com/css2?family=Cinzel');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel");
 
 // Handwriting
 
 // @import url('https://fonts.googleapis.com/css2?family=Dancing+Script');
 // @import url('https://fonts.googleapis.com/css2?family=Satisfy');
+// @import url('https://fonts.googleapis.com/css2?family=Hurricane');
+@import url("https://fonts.googleapis.com/css2?family=Kalam");
 
 // Display
-// @import url('https://fonts.googleapis.com/css2?family=Fredoka+One');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One");
 
 // Monospace
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono');
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono");
 // @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono');
 
-// $backgroundColor: #fff;
+$backgroundColor: #fff;
 
-// $mainColor: #000;
-// $headingColor: #111;
+$mainColor: #000;
+$headingColor: #111;
 
-$mainFontSize: 2em;
-// $mainFont: 'Roboto', sans-serif;
-// $headingFont: 'Roboto', sans-serif;
-// $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-// $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
-// $mainFont: 'Ubuntu';
-// $headingFont: 'Ubuntu';
-$mainFont: 'Signika Negative';
-$headingFont: 'Signika Negative';
-// $mainFont: 'Open Sans';
-// $headingFont: 'Open Sans';
-
+$mainFontSize: 2.3em;
+$mainFont: "Signika Negative", "Source Sans Pro", Helvetica, sans-serif;
+$headingFont: "Signika Negative", "Source Sans Pro", Helvetica, sans-serif;
 $headingLetterSpacing: normal;
 $headingFontWeight: 600;
-$linkColor: #2690e7;
-$linkColorHover: lighten( $linkColor, 25% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+$linkColor: #0477b9;
+$linkColorHover: lighten($linkColor, 25%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
 $detailBackgroundColor: #dae5e9;
 $logo: url("../example-background-neg.svg");
 
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
-$heading4Size: 1.0em;
+$heading4Size: 1em;
 
 @import "reveal-js/dist/theme/template/theme";
 
 section.has-light-background {
-	$detailBackgroundColor: #bd2b0b !global;
-	$logo: url("../example-background.svg") !global;
+    $detailBackgroundColor: #bd2b0b !global;
+    $logo: url("../example-background.svg") !global;
 
-	&, h1, h2, h3, h4, h5, h6 {
-		color: #222;
-	}
-}
-.reveal pre {
-	margin: 1em auto;
+    &,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #222;
+    }
 }
 
 .reveal strong,
 .reveal b {
-	font-weight: bold;
-	color: #b81f0b
+    font-weight: bold;
+    color: #9f0000;
 }
 
 .reveal em {
-	font-style: italic;
-	color: #039418
+    font-style: italic;
+    color: #006900;
 }
 
 .reveal section img {
-	border: 0em;
-	box-shadow: none;
+    border: 0em;
+    box-shadow: none;
     max-width: 100%;
-    max-height: 23em;
+    max-height: 730px;
     height: auto;
-	object-fit: contain;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.reveal code {
-	color: rgb(209, 28, 124);
-	font-family: "JetBrains Mono", "Oxygen Mono", "Roboto Mono", "Ubuntu Mono", "Courier New", Courier, monospace;
-	font-weight: bold;
+.reveal section img {
+    border: 0em;
+    box-shadow: none;
 }
 
-.reveal pre code {
-	color: black;
-}
-
-// HEADERS
-
-.reveal h1 {
-	text-transform: none;
+.reveal div .gist .hljs-ln {
+    color: black;
+    font-size: 60%;
+    line-height: 100%;
 }
 
 .reveal h2 {
-	text-transform: none;
+    color: navy;
+    text-transform: none;
 }
 
 .reveal h3 {
-	text-transform: none;
-	margin: .5em 0 0;
+    margin-top: 0.5em;
+    text-transform: none;
 }
 
 .reveal h4 {
-	text-transform: none;
+    margin: 0.5em 0px 0px 0px;
 }
 
-// LISTS
+.reveal p {
+    margin: 0.2em 0 0 0.2em;
+    text-align: justify;
+}
 
 .reveal ul {
-	margin: .2em .2em .2em;
+    display: block;
+    margin-left: 3vw;
+}
+
+.reveal li ul {
+    margin-left: 1vw;
+    list-style: none;
+}
+
+.reveal li ul li ul {
+    list-style: none;
+    content: "▶";
 }
 
 .reveal li li {
-	font-size: 80%;
+    margin-left: 0.5em;
+    font-size: 90%;
 }
 
-.gist-it-gist .gist-file .gist-data pre, .gister-gist .gist-file .gist-data pre {
-	box-shadow: none !important;
+.reveal ul li ul > li:before {
+    font-size: 75%;
+    line-height: 100%;
+    content: "▶";
+    position: relative;
+    right: 1em;
+}
+
+.reveal ol {
+    display: block;
+    margin: 0px 0px 0.5em 2vw;
+}
+
+.gist-it-gist .gist-file .gist-data pre,
+.gister-gist .gist-file .gist-data pre {
+    box-shadow: none !important;
+}
+
+.reveal code {
+    color: deeppink;
+    line-height: 100%;
+    font-weight: bold;
+    font-size: 100%;
+    font-family: "Inconsolata";
+}
+
+.reveal pre {
+    width: min-content;
+    max-width: 113%;
+    margin: 0em;
+    padding: 0em;
+    border-radius: 0.65em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    border: #000;
+    border-width: 0.5em;
+    box-shadow: 0.25em 0.25em 0.5em 0.01em #888888;
+}
+
+.reveal pre code {
+    max-width: 100%;
+    line-height: 100%;
+    font-size: 0.96em;
+    color: black;
+    max-height: none;
+    font-family: "Inconsolata";
+    font-weight: normal;
+    margin: 0.1em;
+    // line-height: 1.2em;
+    // font-size: 1.5em;
+    // font-weight: normal;
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+    padding-top: 0.25vw;
+    padding-bottom: 0.25vw;
+    border: #000000aa;
+    border-style: solid;
+    border-width: 0.1vw;
+    border-radius: 0.5vw;
+    // box-sizing: border-box;
+}
+
+.reveal div.highlight {
+    max-width: 1440px;
+    overflow-x: visible;
+    display: flex;
+    align-content: center;
+    // justify-content: flex-start;
+    // flex-direction: row;
+    justify-content: center;
+    margin: 0.3vw 0 0.5vw 0;
+}
+
+.hljs {
+    background: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 0 3em 0.6em rgba(255, 255, 255, 0.2);
 }
 
 // Nice blockquote and cite
 
 .reveal blockquote {
-	width:90%;
-	margin:0.3em auto;
-	font-family: 'Satisfy';
-	font-style: normal;
-	font-size: 1.2em;
-	color: #333333;
-	padding:0.1em 0.1em 0.1em 0.1em;
-	border-color: #039418;
-	border-style: solid;
-	border-width: 0.1em;
-	border-radius: 1em;
-	border-left:0.7em solid #039418 ;
-	line-height: 1.2em;
-	position: relative;
-	background:#EDEDED;
-	text-align: center;
+    width: 90%;
+    margin: 0.3em auto;
+    font-family: "Kalam";
+    font-style: normal;
+    font-size: 1.2em;
+    color: #333333;
+    padding: 0.1em 0.1em 0.1em 0.1em;
+    border-color: #039418;
+    border-style: solid;
+    border-width: 0.1em;
+    border-radius: 1em;
+    border-left: 0.7em solid #039418;
+    line-height: 1.2em;
+    position: relative;
+    background: #fafafa;
+    text-align: center;
 }
 
-.reveal blockquote::before{
-	font-family:Arial;
-	content: "\201C";
-	color:#039418;
-	font-size: 4em;
-	position: absolute;
-	left: 0.05em;
-	top: 0.25em;
+.reveal blockquote::before {
+    font-family: Arial;
+    content: "\201C";
+    color: #039418;
+    font-size: 4em;
+    position: absolute;
+    left: 0.05em;
+    top: 0.25em;
 }
 
-.reveal blockquote p::before{
-	content: "";
-	padding-left: 2em;
+.reveal blockquote p::before {
+    content: "";
+    padding-left: 2em;
 }
 
-.reveal blockquote::after{
-	font-family:Arial;
-	content: "\201D";
-	color:#039418;
-	font-size: 4em;
-	position: absolute;
-	bottom: -0.2em;
-	right: 0.1em;
+.reveal blockquote::after {
+    font-family: Arial;
+    content: "\201D";
+    color: #039418;
+    font-size: 4em;
+    position: absolute;
+    bottom: -0.2em;
+    right: 0.1em;
 }
 
 .reveal cite::before {
-	content: "— ";
+    content: "— ";
 }
 
 .reveal cite {
-	display: block;
-	text-align: right;
-	padding-right: 10%;
-	padding-top: 0.5em;
-	font-weight: bolder;
-	font-family: 'Cinzel';
-	font-size: 0.7em;
-}
-
-.gist-it-gist .gist-file .gist-data pre, .gister-gist .gist-file .gist-data pre {
-	box-shadow: none !important;
+    display: block;
+    text-align: right;
+    padding-right: 10%;
+    padding-top: 0.5em;
+    font-weight: bolder;
+    font-family: "Cinzel";
+    font-size: 0.7em;
 }
 
 // Mermaid graph resizing
 
 .mermaid svg {
-	max-width: 100% !important;
-	max-height: 45vh !important;
-	height: 20%;
-	width: 100vw;
-	transition: transform 0.3s ease;
-	font-weight: bold;
-	border-width: 0.1em;
-	border-style: none;
+    max-width: 100% !important;
+    max-height: 43vh !important;
+    height: 20%;
+    width: 100vw;
+    transition: transform 0.3s ease;
+    border-width: 0.1em;
+    border-style: none;
 }
 
+// Mermaid flowcharts as git graphs
 
-// Keyboard keys
-
-kbd {
-  display: inline-block;
-  min-width: 1em;
-  text-align: center;
-  padding: 0.1em 0.4em;
-  font-size: 0.8em;
-  margin-left: 0.1em;
-  margin-right: 0.2em;
-  color: $mainColor;
-  background-color: $backgroundColor;
-  border-radius: 0.2em;
-  border-style: solid;
-  border-width: 0.1em;
-  box-shadow: 0 0 0.1em $mainColor, 0.1em 0.1em 0em $mainColor;
-  font-family: 'Inconsolata';
-  font-weight: normal;
+.mermaid .cluster.repo > rect {
+    stroke-width: 0.2em !important;
+    fill: ghostwhite !important;
+    stroke: gray !important;
+}
+.mermaid .remote > path {
+    stroke-width: 0.2em !important;
+    fill: rgb(253, 189, 253) !important;
+    stroke: rgb(170, 0, 255) !important;
 }
 
-.green {
-	color: rgb(0, 255, 0);
+.mermaid .head > polygon {
+    fill: #ff7274 !important;
+    stroke: #aa1d1f !important;
+    stroke-width: 0.2em !important;
 }
 
-.red {
-	color: red;
+.mermaid .branch > rect {
+    stroke-width: 0.2em !important;
+    fill: greenyellow !important;
+    stroke: green !important;
 }
 
-.white {
-	color: white;
+.mermaid .commit > rect {
+    fill: white !important;
+    stroke: #333 !important;
+    stroke-width: 0.2em !important;
 }
 
-.text-center {
-	text-align: center;
+.mermaid .tag > polygon {
+    fill: cyan !important;
+    stroke: blue !important;
+    stroke-width: 0.2em !important;
 }
 
-.flex {
-	display: flex;
-	justify-content: center;
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-.reveal .slide-background {
-	background-color: $backgroundColor;
-	background-image: $logo;
-	background-repeat: no-repeat;
-	background-position: 0.45% 99.2%;
-	background-size: 15%;
-	background-clip: border-box;
-	border-radius: 30px;
-	border-style: solid;
-	border-color: $detailBackgroundColor;
-	border-width: 0.3em;
+.custom > .highlight {
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
-.reveal .slide-background:after {
-	content: "Authors - Title - Venue Year";
-	position: absolute;
-	bottom: 2.5%;
-	right: 6%;
-	z-index: -1;
-	color: $detailBackgroundColor;
-	font-size: .8em;
-  }
+.restart-policy {
+    position: absolute;
+    top: 316px;
+    left: 30%;
+    z-index: 2;
+    box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.8);
+    height: 25px;
+    width: 350px;
+    color: darkred;
+    font-weight: bolder;
+}
 
+.image-pull-policy {
+    position: absolute;
+    top: 342px;
+    left: 30%;
+    z-index: 2;
+    box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.8);
+    height: 25px;
+    width: 400px;
+    color: darkred;
+    font-weight: bolder;
+}
 
-  // Multicolumn styling
+.resources {
+    position: absolute;
+    top: 365px;
+    left: 30%;
+    z-index: 2;
+    box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.8);
+    height: 180px;
+    width: 300px;
+    color: darkred;
+    font-weight: bolder;
+}
 
-  .reveal div.col {
-	// draw a red border
-	// border: 1px solid red;
-	text-align: left;
-	border: .2em dashed $detailBackgroundColor;
-	border-style: double;
-	border-radius: 1em;
-	padding: 0.5em;
+.ports {
+    position: absolute;
+    top: 535px;
+    left: 30%;
+    z-index: 2;
+    box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.8);
+    height: 80px;
+    width: 320px;
+    color: darkred;
+    font-weight: bolder;
+}
+
+.config-cluster {
+    position: absolute;
+    top: 130px;
+    left: 25%;
+    z-index: 2;
+    border: solid 10px;
+    height: 250px;
+    width: 800px;
+    color: darkred;
+    font-weight: bolder;
+}
+
+.config-user {
+    position: absolute;
+    top: 740px;
+    left: 23%;
+    z-index: 2;
+    border: solid 10px;
+    height: 160px;
+    width: 1050px;
+    color: darkred;
+    font-weight: bolder;
+}
+
+.config-context {
+    position: absolute;
+    top: 570px;
+    left: 25%;
+    z-index: 2;
+    border: solid 10px;
+    height: 320px;
+    width: 800px;
+    color: darkred;
+    font-weight: bolder;
+}
+
+// Multicolumn styling
+
+.multiCol {
+    display: table;
+    table-layout: fixed; // don't fudge depending on content
+    width: 100%;
+    text-align: left; // matter of taste, makes imho sense
+
+    .col {
+        display: table-cell;
+        vertical-align: top;
+        width: 50%;
+        margin: auto;
+        padding: 2% 0 5% 5%; // some vertical, and between columns
+
+        &:first-of-type {
+            padding-left: 0;
+        }
+
+        // there's nothing before col1
+    }
+}
+
+.reveal div.col {
+    // draw a red border
+    // border: 1px solid red;
+    text-align: left;
+    border: 0.1em dashed $detailBackgroundColor;
+    border-style: none;
+    border-radius: 1em;
+    padding: 0.5em;
 }
 
 .reveal div.container {
-	// border: 1px solid red;
-	align-self: center;
-	min-width: 90%;
-	margin-right: 5%;
-	margin-left: 5%;
-	margin-top: 1em;
+    // border: 1px solid red;
+    align-self: center;
+    min-width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 1em;
 }
-
-@-webkit-keyframes blur-animation {
-  0% {
-    -webkit-filter: blur(0px) ;
-    -moz-filter: blur(0px);
-    -o-filter: blur(0px);
-    -ms-filter: blur(0px);
-    filter: blur(0px);
-
-  }
-  100% {
-    -webkit-filter: blur(4px) saturate(.5) brightness(.8);
-    -moz-filter: blur(5px) saturate(.7) brightness(.9);
-    -o-filter: blur(5px) saturate(.7) brightness(.9);
-    -ms-filter: blur(5px)saturate(.7) brightness(.9);
-    filter: blur(6px) saturate(1) brightness(.2);
-  }
-}
-
-html.blur-animation .backgrounds {
-   -webkit-animation-name: blur-animation;
-   -webkit-animation-duration: 1s;
-   -webkit-animation-iteration-count: 1;
-   -webkit-animation-direction: alternate;
-   -webkit-animation-timing-function: ease-out;
-   -webkit-animation-fill-mode: forwards;
-   -webkit-animation-delay: 0s;
- }
-
- @-webkit-keyframes blur-animation-light {
-  0% {
-    -webkit-filter: blur(0px) ;
-    -moz-filter: blur(0px);
-    -o-filter: blur(0px);
-    -ms-filter: blur(0px);
-    filter: blur(0px);
-
-  }
-  100% {
-    -webkit-filter: blur(6px) contrast(0.5) saturate(3) brightness(2) contrast(0.5) brightness(1.3) ;
-    -moz-filter: blur(6px) contrast(0.5) saturate(3) brightness(2) contrast(0.5) brightness(1.3) ;
-    -o-filter: blur(6px) contrast(0.5) saturate(3) brightness(2) contrast(0.5) brightness(1.3) ;
-    -ms-filter: blur(6px) contrast(0.5) saturate(3) brightness(2) contrast(0.5) brightness(1.3) ;
-    filter: blur(6px) contrast(0.5) saturate(3) brightness(2) contrast(0.5) brightness(1.3) ;
-  }
-}
-
-html.blur-animation-light .backgrounds {
-	color: #039418;
-   -webkit-animation-name: blur-animation-light;
-   -webkit-animation-duration: 1s;
-   -webkit-animation-iteration-count: 1;
-   -webkit-animation-direction: alternate;
-   -webkit-animation-timing-function: ease-out;
-   -webkit-animation-fill-mode: forwards;
-   -webkit-animation-delay: 0s;
- }
