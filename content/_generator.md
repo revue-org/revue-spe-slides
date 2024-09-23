@@ -57,7 +57,7 @@ System's main properties:
 
 -   _Energy Efficiency_
 
-[Documentation](https://revue-org.github.io/revue/docs/report/analysis/quality-attributes).
+[Documentation](https://revue-org.github.io/revue/docs/report/analysis/quality-attributes)
 
 ---
 
@@ -189,7 +189,7 @@ To monitor the system:
 -   **Prometheus**: for metrics collection and alerting
 -   **Grafana**: for metrics visualization
 
-[Documentation](https://revue-org.github.io/revue/docs/category/deployment/kubernetes)
+[Documentation](https://revue-org.github.io/revue/docs/report/deployment/kubernetes)
 
 ---
 
