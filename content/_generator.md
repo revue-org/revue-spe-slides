@@ -193,4 +193,4 @@ To monitor the system:
 
 ---
 
-![Monitoring](https://raw.githubusercontent.com/revue-org/revue/main/docs/website/docs/report/img/grafana-monitoring.png)
+![Monitoring](https://raw.githubusercontent.com/revue-org/revue/main/docs/website/docs/report/img/monitoring/grafana-monitoring.png)
