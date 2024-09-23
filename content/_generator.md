@@ -193,4 +193,6 @@ To monitor the system:
 
 ---
 
+### Dashboard
+
 ![Monitoring](https://raw.githubusercontent.com/revue-org/revue/main/docs/website/docs/report/img/monitoring/grafana-monitoring.png)
