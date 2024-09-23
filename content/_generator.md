@@ -95,7 +95,7 @@ After the event storming session, the following contexts have been identified:
 
 ## Context Map
 
-![Context Map](https://revue-org.github.io/revue/assets/images/ContextMap-7e49c19a18bd072c726a8ec3ffe73d6e.png)
+![Context Map](https://raw.githubusercontent.com/revue-org/revue/main/docs/website/docs/report/img/ContextMap.png)
 
 ---
 
@@ -186,6 +186,6 @@ The system is
 
 ### Cluster Overview
 
-![Context Map](https://revue-org.github.io/revue/assets/images/kubernetes-deployment-2564f960a43a371d629d42d0a8b00a55.png)
+![Kubernetes deployment](https://raw.githubusercontent.com/revue-org/revue/main/docs/website/docs/report/img/kubernetes-deployment.png)
 
 ---
