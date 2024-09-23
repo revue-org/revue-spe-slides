@@ -171,7 +171,12 @@ Two way to deploy the system:
 
 ## Docker Compose
 
-The system is
+To simplify the development phase, docker-compose is used.
+It allows deploying the system on a single machine.
+
+Additional scripts are provided to deploy specific components. 
+
+[Documentation](https://revue-org.github.io/revue/docs/report/deployment/docker-compose)
 
 ---
 
@@ -187,3 +192,16 @@ The system is
 ![Kubernetes deployment](https://raw.githubusercontent.com/revue-org/revue/main/docs/website/docs/report/img/kubernetes-deployment.png)
 
 ---
+
+### Monitoring
+
+To monitor the system:
+
+- **Prometheus**: for metrics collection and alerting
+- **Grafana**: for metrics visualization
+
+[Documentation](https://revue-org.github.io/revue/docs/category/deployment/kubernetes)
+
+---
+
+![Monitoring](https://raw.githubusercontent.com/revue-org/revue/main/docs/website/docs/report/img/grafana-monitoring.png)
