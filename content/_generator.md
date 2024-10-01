@@ -100,7 +100,7 @@ gitGraph
   merge fix/fix-2 tag: "1.1.1"
 ```
 
-- Chenge are merged into the main branch via pull requests. 
+- Changes are merged into the main branch via pull requests. 
 - Pull requests are reviewed and approved by at least one other developer
 - Releases are made on the `main` branch.
 
@@ -108,7 +108,7 @@ gitGraph
 
 ## Version Control (2/2)
 
-- Commit messages are stardardized, according to _[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)_.
+- Commit messages are standardized, according to _[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)_.
 
 
 - Source code version number follows the rules of _[Semantic Versioning](https://semver.org/)_.
