@@ -20,10 +20,6 @@ aliases = [
 
 ---
 
-# Analysis
-
----
-
 ## Requirements
 
 Detailed requirements can be found in the [documentation](https://revue-org.github.io/revue/docs/report/analysis/business-requirements).
