@@ -28,25 +28,6 @@ aliases = [
 
 Detailed requirements can be found in the [documentation](https://revue-org.github.io/revue/docs/report/analysis/business-requirements).
 
----
-
-## Quality Attributes
-
-System's main properties:
-
--   _Scalability_
-
--   _Availability_
-
--   _Reliability_
-
--   _Observability_
-
--   _Modularity_
-
--   _Energy Efficiency_
-
-[Documentation](https://revue-org.github.io/revue/docs/report/analysis/quality-attributes)
 
 ---
 
@@ -84,29 +65,32 @@ System's main properties:
 
 ---
 
-## Microservices patterns
+# Dev Ops
 
-We reasoned about:
+---
 
--   **Communication patterns**
-    -   Remote Procedure Invocation
-    -   Asynchronous Messaging
--   **External API patterns**
-    -   API Gateway (reverse proxy)
--   **Deployment patterns**
-    -   Service as container
-    -   Database per service
-    -   Externalized configuration
--   **Security patterns**
-    -   Token-based security
+## Version Control
 
-[Documentation](https://revue-org.github.io/revue/docs/report/design/architecture/patterns)
+---
+
+## Build Automation
+
+---
+
+## Quality Assurance
+
+--- 
+
+## Workflow
+
+---
+
+## License
 
 ---
 
 <!-- write-here "shared-slides/deployment/deployment.md" -->
 <!-- end-write -->
-
 
 ---
 
@@ -118,19 +102,3 @@ We reasoned about:
 <!-- write-here "shared-slides/deployment/cluster_overview.md" -->
 <!-- end-write -->
 
----
-
-## Monitoring
-
-To monitor the system:
-
--   **Prometheus**: for metrics collection and alerting
--   **Grafana**: for metrics visualization
-
-[Documentation](https://revue-org.github.io/revue/docs/report/deployment/kubernetes)
-
----
-
-### Dashboard
-
-![Monitoring](https://raw.githubusercontent.com/revue-org/revue/main/docs/website/docs/report/img/monitoring/grafana-monitoring.png)
