@@ -15,7 +15,8 @@ aliases = [
 
 ---
 
-{{% import path="shared-slides/introduction.md" %}}
+<!-- write-here "shared-slides/introduction.md" -->
+<!-- end-write -->
 
 ---
 
@@ -53,27 +54,33 @@ System's main properties:
 
 ---
 
-{{% import path="shared-slides/design/event_storming.md" %}}
+<!-- write-here "shared-slides/design/event_storming.md" -->
+<!-- end-write -->
 
 ---
 
-{{% import path="shared-slides/design/bounded_context.md" %}}
+<!-- write-here "shared-slides/design/bounded_context.md" -->
+<!-- end-write -->
 
 ---
 
-{{% import path="shared-slides/design/context_map.md" %}}
+<!-- write-here "shared-slides/design/context_map.md" -->
+<!-- end-write -->
 
 ---
 
-{{% import path="shared-slides/architecture/architecture.md" %}}
+<!-- write-here "shared-slides/architecture/architecture.md" -->
+<!-- end-write -->
 
 ---
 
-{{% import path="shared-slides/architecture/microservices.md" %}}
+<!-- write-here "shared-slides/architecture/microservices.md" -->
+<!-- end-write -->
 
 ---
 
-{{% import path="shared-slides/architecture/clean_architecture.md" %}}
+<!-- write-here "shared-slides/architecture/clean_architecture.md" -->
+<!-- end-write -->
 
 ---
 
@@ -97,15 +104,19 @@ We reasoned about:
 
 ---
 
-{{% import path="shared-slides/deployment/deployment.md" %}}
+<!-- write-here "shared-slides/deployment/deployment.md" -->
+<!-- end-write -->
+
 
 ---
 
-{{% import path="shared-slides/deployment/kubernetes.md" %}}
+<!-- write-here "shared-slides/deployment/kubernetes.md" -->
+<!-- end-write -->
 
 ---
 
-{{% import path="shared-slides/deployment/cluster_overview.md" %}}
+<!-- write-here "shared-slides/deployment/cluster_overview.md" -->
+<!-- end-write -->
 
 ---
 
