@@ -1,3 +1,6 @@
 [submodule "themes/reveal-hugo"]
 	path = themes/reveal-hugo
 	url = https://github.com/cric96/reveal-hugo.git
+[submodule "shared-slides"]
+	path = shared-slides
+	url = git@github.com:revue-org/shared-slides.git
