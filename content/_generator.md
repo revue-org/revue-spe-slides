@@ -83,6 +83,15 @@ Detailed requirements can be found in the [documentation](https://revue-org.gith
 
 ## Workflow
 
+```mermaid
+flowchart LR
+    A[build-matrix] & B[style] & C[build-website] -- ✅--> F[Compute-next-version] --> G[release]
+    G --> H[deploy-website]
+    G --> I[docker-matrix]
+    H & I -- ✅ --> J[success]
+    A & B & C & G -- ✅ --> J
+```
+
 ---
 
 ## License
