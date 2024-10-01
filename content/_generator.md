@@ -68,7 +68,7 @@ Detailed requirements can be found in the [documentation](https://revue-org.gith
 ## Version Control (1/2)
 
 - A single stable `main` branch with the working code. 
-- Changes are made in dedicated branches (feature/name, fix/name, chore/what, etc.) 
+- Changes are made in dedicated branches (_feature/name_, _fix/name_, _chore/what_, etc.) 
 
 ```mermaid
 gitGraph
@@ -108,10 +108,10 @@ gitGraph
 
 ## Version Control (2/2)
 
-- Commits messages are stardardized according to _[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)_.
+- Commit messages are stardardized, according to _[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)_.
 
 
-- Source code version number follow the rules of _[Semantic Versioning](https://semver.org/)_.
+- Source code version number follows the rules of _[Semantic Versioning](https://semver.org/)_.
 
 ---
 
