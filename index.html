@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta name="generator" content="Hugo 0.135.0">
+    <meta charset="utf-8">
+<title>Revue</title>
+<meta name="description" content="A real-time video surveillance and environment monitoring system">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/revue-spe-slides/reveal-js/dist/reset.css">
+<link rel="stylesheet" href="/revue-spe-slides/reveal-js/dist/reveal.css">
+  <link rel="stylesheet" href="/revue-spe-slides/css/custom-theme.min.551b8e64f3d23e9342f060260e29881ee0d48342b2d7c24168ee475bf4505bab.css" id="theme"><link rel="stylesheet" href="/revue-spe-slides/highlight-js/solarized-dark.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oxygen Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu Mono" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/gh/DanySK/css-blur-animation/blur.css" rel="stylesheet" crossorigin="anonymous">
+
+<script src="https://kit.fontawesome.com/81ac037be0.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h1 id="revue">Revue</h1>
+<h2 id="a-real-time-video-surveillance-and-environment-monitoring-system">A real-time video surveillance and environment monitoring system</h2>
+</section><section>
+<!-- this file includes generated content. Do not edit. Edit content/_generator.md, instead. -->
+<h1 id="introduction">Introduction</h1>
+<p><strong>Revue</strong> is a distributed real-time system for video surveillance. It allows the user to:</p>
+<ol>
+<li>
+<p>Check an environment remotely through cameras</p>
+</li>
+<li>
+<p>Monitor an environment using sensors</p>
+</li>
+<li>
+<p>Add security rules based on his needs triggering alarms</p>
+<ol>
+<li>Intrusions in case of violated safety rule by cameras</li>
+<li>Outliers in case of violated safety rule by sensors</li>
+</ol>
+</li>
+</ol>
+<p>Due to his level of configurability, Revue can be used in multiple scenarios.</p>
+</section><section>
+<h1 id="analysis">Analysis</h1>
+</section><section>
+<h2 id="requirements">Requirements</h2>
+<p>Detailed requirements can be found in the <a href="https://revue-org.github.io/revue/docs/report/analysis/business-requirements">documentation</a>.</p>
+</section><section>
+<h1 id="design">Design</h1>
+</section><section>
+<!-- this file includes generated content. Do not edit. Edit content/_generator.md, instead. -->
+<h2 id="event-storming">Event Storming</h2>
+<p>In order to create a better understanding of the domain, we used the Event Storming technique. We performed the following steps:</p>
+<ol>
+<li><strong>Unstructured exploration</strong>: the goal is to identify the main events</li>
+<li><strong>Timeline</strong>: the events are ordered in time</li>
+<li><strong>Pivotal events &amp; pain points</strong>: discussion about critical point that require attention and reasoning on events that have impact on the domain.</li>
+<li><strong>Actors, Commands, Policies and Read Models</strong></li>
+<li><strong>Aggregates</strong>: groping of event into aggregates</li>
+<li><strong>Bounded contexts</strong>: identification of bounded contexts based on aggregates interaction</li>
+</ol>
+<p><a href="https://revue-org.github.io/revue/docs/report/design/event-storming">Documentation</a></p>
+</section><section>
+<!-- this file includes generated content. Do not edit. Edit content/_generator.md, instead. -->
+<h2 id="bounded-contexts">Bounded Contexts</h2>
+<p>After the event storming session, the following contexts have been identified:</p>
+<ul>
+<li><strong>Auth</strong>: Responsible for managing the authentication and authorization of the users. It also is responsible for managing the permissions of the users.</li>
+<li><strong>User</strong>: This context is responsible for managing the users of the system, in particular, nothing regarding the authentication process but only the management of the user registry.</li>
+<li><strong>Monitoring</strong>: It is responsible for managing the devices and the data they produce. This context is responsible for consulting the data produced by the devices, their configurations and everything regarding the WoT interactions.</li>
+<li><strong>Alarm</strong>: Responsible for managing the alarms in the overall system. It is also responsible for the object recognition feature of the system.</li>
+<li><strong>Notification</strong>: Responsible for managing the notifications of the system. It is responsible for sending notifications to the users when particular events occur.</li>
+<li><strong>Location</strong>: Responsible for the location management of the system.</li>
+</ul>
+</section><section>
+<!-- this file includes generated content. Do not edit. Edit content/_generator.md, instead. -->
+<h2 id="context-map">Context Map</h2>
+<p><img src="https://raw.githubusercontent.com/revue-org/revue/main/docs/website/docs/report/img/ContextMap.png" alt="Context Map"></p>
+</section><section>
+<!-- this file includes generated content. Do not edit. Edit content/_generator.md, instead. -->
+<h1 id="architecture">Architecture</h1>
+<p>We chose to use a microservices architecture for the system. This architecture consists on designing software applications as suites of independently deployable services. Each service runs in its own process and communicates with other services through a well-defined interface.</p>
+<ul>
+<li><a href="https://revue-org.github.io/revue/docs/report/design/architecture/documentation#components--connectors">Components &amp; connectors view</a></li>
+<li><a href="https://revue-org.github.io/revue/docs/report/design/architecture/documentation#module-view">Module view</a></li>
+<li><a href="https://revue-org.github.io/revue/docs/report/design/architecture/documentation#deployment-view">Deployment view</a></li>
+</ul>
+</section><section>
+<!-- this file includes generated content. Do not edit. Edit content/_generator.md, instead. -->
+<h2 id="microservices">Microservices</h2>
+<p>Using the <em>Bounded Contexts Decomposition Strategy</em>, we identified the following microservices:</p>
+<ul>
+<li><strong>Auth Service</strong>: Responsible for managing the authentication and authorization of the users.</li>
+<li><strong>User Service</strong>: Responsible for managing the users of the system.</li>
+<li><strong>Device Service</strong>: Responsible for managing the devices connected to the system.</li>
+<li><strong>Monitoring Service</strong>: Responsible for managing the data produced by the devices.</li>
+<li><strong>Alarm Service</strong>: Responsible for managing security rules and anomalies detections.</li>
+<li><strong>Recognition Service</strong>: Responsible for performing object recognition on cameras video streams.</li>
+<li><strong>Notification Service</strong>: Responsible for managing the notifications of the system.</li>
+<li><strong>Location Service</strong>: Responsible for the location management of the system.</li>
+<li><strong>Log Service</strong>: Responsible for storing events that occur in the system.</li>
+</ul>
+</section><section>
+<!-- this file includes generated content. Do not edit. Edit content/_generator.md, instead. -->
+<h2 id="clean-architecture">Clean Architecture</h2>
+<p>The design of all relevant microservices follows the Clean Architecture pattern. This helped us in maintaining a core domain design that abstracts away from all technical issues. As showed in the picture above, we made use of the following layers:</p>
+<ul>
+<li><strong>Domain</strong>: DDD entities, value objects, factories, …</li>
+<li><strong>Application</strong>: DDD services, repositories, …</li>
+<li><strong>Presentation</strong>: Machinery to translate external data representation to domain entities and vice versa.</li>
+<li><strong>Infrastructure</strong>: Mostly external service implementation, DB interfaces, REST APIs, Events managers, …</li>
+</ul>
+<p><a href="https://revue-org.github.io/revue/docs/report/design/architecture/microservices#clean-architecture">Documentation</a></p>
+</section><section>
+<h1 id="dev-ops">Dev Ops</h1>
+</section><section>
+<h2 id="version-control">Version Control</h2>
+<h3 id="commits">Commits</h3>
+<p><a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> to standardize the commit messages.</p>
+<h3 id="versioning">Versioning</h3>
+<p><a href="https://semver.org/">Semantic Versioning</a> to version the software.</p>
+</section><section>
+<h2 id="build-automation">Build Automation</h2>
+<h3 id="plugin">Plugin</h3>
+<p>As an empowerment of the Node package manager, this <a href="https://github.com/kelvindev15/npm-gradle-plugin">plugin</a> has been used for dependencies, devDependencies, and scripts.</p>
+<h3 id="dependency-management">Dependency management</h3>
+<p><a href="https://docs.renovatebot.com/">Renovate</a> has been used to keep all dependencies automatically up to date</p>
+</section><section>
+<h2 id="quality-assurance">Quality Assurance</h2>
+<ul>
+<li>Prettier: a code formatter with support for many languages.</li>
+<li>ESLint: static code analysis tool for identifying problematic patterns.</li>
+<li>Codefactor: review code style and security on every pull request.</li>
+<li>SonarCloud: code quality and security service</li>
+<li>Codacy: automated code review tool</li>
+</ul>
+</section><section>
+<h2 id="workflow">Workflow</h2>
+</section><section>
+<h2 id="license">License</h2>
+<p>The project is licensed under the <a href="https://mit-license.org/">MIT License</a> because of its permissive nature.</p>
+</section><section>
+<!-- this file includes generated content. Do not edit. Edit content/_generator.md, instead. -->
+<h1 id="deployment">Deployment</h1>
+<p>Two way to deploy the system:</p>
+<ol>
+<li><strong>Docker Compose</strong>: for local development and testing</li>
+<li><strong>Kubernetes</strong>: for production</li>
+</ol>
+<p><a href="https://revue-org.github.io/revue/docs/category/deployment">Documentation</a></p>
+</section><section>
+<!-- this file includes generated content. Do not edit. Edit content/_generator.md, instead. -->
+<h2 id="kubernetes">Kubernetes</h2>
+<ul>
+<li>Configuration files for Kubernetes and <code>deploy</code> script are available in the repository <a href="https://github.com/revue-org/revue-kubernetes/">revue-kubernetes</a></li>
+<li>It is provided an example of how to deploy the system on a Raspberry Pi cluster, using the <em>k3s</em> distribution.</li>
+</ul>
+</section><section>
+<!-- this file includes generated content. Do not edit. Edit content/_generator.md, instead. -->
+<h3 id="cluster-overview">Cluster Overview</h3>
+<p><img src="https://raw.githubusercontent.com/revue-org/revue/main/docs/website/docs/report/img/kubernetes-deployment.png" alt="Kubernetes deployment"></p>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src="/revue-spe-slides/reveal-hugo/object-assign.js"></script>
+
+<a href="/revue-spe-slides/reveal-js/dist/print/" id="print-location" style="display: none;"></a>
+
+<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"custom-theme.scss","custom_theme_compile":true,"custom_theme_options":{"enablesourcemap":true,"targetpath":"css/custom-theme.css"},"height":"100%","highlight_theme":"solarized-dark","history":true,"mermaid":[{}],"slide_number":true,"theme":"league","transition":"slide","transition_speed":"fast","width":"100%"}</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/revue-spe-slides/reveal-js/dist/reveal.js"></script>
+
+
+  
+  
+  <script type="text/javascript" src="/revue-spe-slides/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/revue-spe-slides/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/revue-spe-slides/reveal-js/plugin/zoom/zoom.js"></script>
+  
+  <script type="text/javascript" src="/revue-spe-slides/reveal-js/plugin/notes/notes.js"></script>
+  
+  
+  <script type="text/javascript" src="/revue-spe-slides/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+
+  var revealHugoPlugins = { 
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+   };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams),
+    camelize(revealHugoPlugins));
+  Reveal.initialize(options);
+</script>
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+</script>
+
+<script type="text/javascript" id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+<script>
+  if (/.*?(\?|&)print-pdf/.test(window.location.toString())) {
+      var ytVideos = document.getElementsByTagName("iframe")
+      for (let i = 0; i < ytVideos.length; i++) {
+          var videoFrame = ytVideos[i]
+          var isYouTube = /^https?:\/\/(www.)youtube\.com\/.*/.test(videoFrame.src)
+          if (isYouTube) {
+              console.log(`Removing ${videoFrame.src}`)
+              var parent = videoFrame.parentElement
+              videoFrame.remove()
+              var p = document.createElement('p')
+              p.append(
+                  document.createTextNode(
+                      "There was an embedded video here, but it is disabled in the printed version of the slides."
+                  )
+              )
+              p.append(document.createElement('br'))
+              p.append(
+                  document.createTextNode(
+                      `Visit instead ${
+                          videoFrame.src
+                      } or ${
+                          videoFrame.src.replace(
+                              /(^https?:\/\/(www.)youtube\.com)\/(embed\/)(\w+).*/,
+                              "https://www.youtube.com/watch?v=$4"
+                          )
+                      }`
+                  )
+              )
+              parent.appendChild(p)
+          }
+      }
+  }
+</script>
+
+
+    
+  
+
+</body></html>
