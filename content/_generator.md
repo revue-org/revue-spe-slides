@@ -139,6 +139,14 @@ As an empowerment of the Node package manager, this [plugin](https://github.com/
 
 ## Workflow
 
+```mermaid
+flowchart LR
+    A[build-matrix] & B[style] & C[build-website] -- ✅--> F[Compute-next-version] --> G[release]
+    G --> H[deploy-website]
+    G --> I[docker-matrix]
+    H & I -- ✅ --> J[success]
+    A & B & C & G -- ✅ --> J
+```
 
 ---
 
