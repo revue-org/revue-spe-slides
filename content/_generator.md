@@ -101,7 +101,7 @@ gitGraph
 ```
 
 - Changes are merged into the main branch via pull requests. 
-- Pull requests are reviewed and approved by at least one other developer
+- Pull requests are reviewed and approved by at least one other developer.
 - Releases are made on the `main` branch.
 
 ---
@@ -123,7 +123,7 @@ As an empowerment of the Node package manager, this [plugin](https://github.com/
 
 ### Dependency management
 
-[Renovate](https://docs.renovatebot.com/) has been used to keep all dependencies automatically up to date
+[Renovate](https://docs.renovatebot.com/) has been used to keep all dependencies automatically up to date.
 
 ---
 
@@ -132,8 +132,8 @@ As an empowerment of the Node package manager, this [plugin](https://github.com/
 - [Prettier](https://prettier.io/): a code formatter with support for many languages.
 - [ESLint](https://eslint.org/): static code analysis tool for identifying problematic patterns.
 - [Codefactor](https://www.codefactor.io/): review code style and security on every pull request.
-- [SonarCloud](https://www.sonarsource.com/products/sonarcloud/): code quality and security service
-- [Codacy](https://www.codacy.com/): automated code review tool
+- [SonarCloud](https://www.sonarsource.com/products/sonarcloud/): code quality and security service.
+- [Codacy](https://www.codacy.com/): automated code review tool.
 
 --- 
 
