@@ -94,11 +94,11 @@ As an empowerment of the Node package manager, this [plugin](https://github.com/
 
 ## Quality Assurance
 
-- Prettier: a code formatter with support for many languages.
-- ESLint: static code analysis tool for identifying problematic patterns.
-- Codefactor: review code style and security on every pull request.
-- SonarCloud: code quality and security service
-- Codacy: automated code review tool
+- [Prettier](https://prettier.io/): a code formatter with support for many languages.
+- [ESLint](https://eslint.org/): static code analysis tool for identifying problematic patterns.
+- [Codefactor](https://www.codefactor.io/): review code style and security on every pull request.
+- [SonarCloud](https://www.sonarsource.com/products/sonarcloud/): code quality and security service
+- [Codacy](https://www.codacy.com/): automated code review tool
 
 --- 
 
