@@ -104,6 +104,8 @@ gitGraph
 - Pull requests are reviewed and approved by at least one other developer.
 - Releases are made on the `main` branch.
 
+[Documentation](https://revue-org.github.io/revue/docs/report/devops#version-control)
+
 ---
 
 ## Version Control (2/2)
@@ -113,21 +115,28 @@ gitGraph
 
 - Source code version number follows the rules of _[Semantic Versioning](https://semver.org/)_.
 
+[Documentation](https://revue-org.github.io/revue/docs/report/devops#version-control)
+
 ---
 
 ## Build Automation
 
-### Plugin
-
-As an empowerment of the Node package manager, this [plugin](https://github.com/kelvindev15/npm-gradle-plugin) has been used for dependencies, devDependencies, and scripts.
+- We use [Gradle](https://gradle.org/) as the main build automation tool.
+- We developed the [Npm Gradle Plugin](https://github.com/kelvindev15/npm-gradle-plugin).
+- It empowers the [Node package manager](https://www.npmjs.com/) leveraging on some useful gradle features.
+- It is used to declare dependencies, devDependencies, and npm scripts.
 
 ### Dependency management
 
-[Renovate](https://docs.renovatebot.com/) has been used to keep all dependencies automatically up to date.
+- We use [Renovate](https://docs.renovatebot.com/) to keep dependencies automatically up to date.
+
+[Documentation](https://revue-org.github.io/revue/docs/report/devops#build-automation)
 
 ---
 
 ## Quality Assurance
+
+Tools used for quality assurance:
 
 - [Prettier](https://prettier.io/): a code formatter with support for many languages.
 - [ESLint](https://eslint.org/): static code analysis tool for identifying problematic patterns.
@@ -141,12 +150,14 @@ As an empowerment of the Node package manager, this [plugin](https://github.com/
 
 ```mermaid
 flowchart LR
-    A[build-matrix] & B[style] & C[build-website] -- ✅ --> F[Compute-next-version] --> G[release]
+    A[build-matrix] & B[style] & C[build-website] -- OK--> F[Compute-next-version] --> G[release]
     G --> H[deploy-website]
     G --> I[docker-matrix]
-    H & I -- ✅ --> J[success]
-    A & B & C & G -- ✅ --> J
+    H & I -- OK --> J[success]
+    A & B & C & G -- OK --> J
 ```
+
+[Documentation](https://revue-org.github.io/revue/docs/report/devops/#the-cicd-pipeline)
 
 ---
 
