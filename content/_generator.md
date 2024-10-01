@@ -69,14 +69,53 @@ Detailed requirements can be found in the [documentation](https://revue-org.gith
 
 ---
 
-## Version Control
+## Version Control (1/2)
 
-### Commits
-[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to standardize the commit messages.
+- A single stable `main` branch with the working code. 
+- Changes are made in dedicated branches (feature/name, fix/name, chore/what, etc.) 
 
-### Versioning
-[Semantic Versioning](https://semver.org/) to version the software.
+```mermaid
+gitGraph
+  commit id: "chore: ..."
+  commit id: "build: ..."
+  commit id: "chore: ..."
+  commit id: "ci: ..."
+  branch feat/feature-1
+  checkout feat/feature-1
+  commit id: "feat: feature 1"
+  branch chore/some-chore-1
+  checkout chore/some-chore-1
+  commit id: "chore: some chore 1"
+  checkout feat/feature-1
+  merge chore/some-chore-1
+  checkout feat/feature-1
+  commit id: "feat: feature 2"
+  checkout main
+  merge feat/feature-1 tag: "1.0.0"
+  branch feat/feature-2
+  commit id: "feat: feature 3"
+  checkout main
+  merge feat/feature-2 tag: "1.1.0"
+  checkout main
+  branch fix/fix-2
+  commit id: "fix: fix1"
+  commit id: "fix: fix2"
+  checkout main
+  merge fix/fix-2 tag: "1.1.1"
+```
 
+- Chenge are merged into the main branch via pull requests. 
+- Pull requests are reviewed and approved by at least one other developer
+- Releases are made on the `main` branch.
+
+---
+
+## Version Control (2/2)
+
+- Commits messages are stardardized according to _[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)_.
+
+
+- Source code version number follow the rules of _[Semantic Versioning](https://semver.org/)_.
 
 ---
 
